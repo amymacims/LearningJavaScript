@@ -32,6 +32,7 @@ router.get('/api/test', function(req, res) {
   var var2 = req.query.var2;
   var var3 = req.query.var3;
   var var4 = req.query.var4;
+  var var5 = req.query.var5;
   
   var responseJson = {};
   
@@ -42,6 +43,7 @@ router.get('/api/test', function(req, res) {
   responseJson.var2PassedIn = var2;
   responseJson.var3PassedIn = var3;
   responseJson.var4PassedIn = var4;
+  responseJson.var5PassedIn = var5;
   
 	res.json(200, responseJson);
 });

@@ -22,7 +22,7 @@ var io = socketio.listen(server);
 
 router.use(express.static(path.resolve(__dirname, 'client')));
 
-
+/*
 router.use(express.bodyParser());
 
 
@@ -30,6 +30,7 @@ router.get('/api/test', function(req, res) {
   
   var var1 = req.query.var1;
   var var2 = req.query.var2;
+  var var3 = req.query.var3;
   
   var responseJson = {};
   
@@ -38,10 +39,11 @@ router.get('/api/test', function(req, res) {
   
   responseJson.var1PassedIn = var1;
   responseJson.var2PassedIn = var2;
+  responseJson.var2PassedIn = var3;
   
 	res.json(200, responseJson);
 });
-
+*/
 
 
 

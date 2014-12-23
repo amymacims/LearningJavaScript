@@ -21,7 +21,8 @@ var server = http.createServer(router);
 var io = socketio.listen(server);
 
 router.use(express.static(path.resolve(__dirname, 'client')));
-
+var guid = require('./utils/guid.js');
+router.use(express.bodyParser());
 /*
 router.use(express.bodyParser());
 
@@ -48,7 +49,9 @@ router.get('/api/test', function(req, res) {
 	res.json(200, responseJson);
 });
 */
-
+router.get('/api/guid', function(req, res) {
+	res.json(200, {guid:guid.generate(req.query.useDashes)});
+});
 
 
 var messages = [];
